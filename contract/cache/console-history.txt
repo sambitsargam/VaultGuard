@@ -1,0 +1,3 @@
+const vault = (await ethers.getContractFactory("Vault")).attach(process.env.VAULT_CONTRACT_ADDRESS)
+await vault.withdrawCollateral(0, ethers.utils.parseUnits("400", 6))
+const vault = (await ethers.getContractFactory("Vault")).attach(process.env.VAULT_CONTRACT_ADDRESS)

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VaultGuard Frontend</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>VaultGuard</h1>
+
+    <div id="connection">
+        <button id="connectButton">Connect Wallet</button>
+        <p>Status: <span id="connectionStatus">Not Connected</span></p>
+        <p>Your Address: <span id="account"></span></p>
+    </div>
+
+    <hr>
+
+    <div id="vaultCreator">
+        <h2>Create a Vault</h2>
+        <button id="createVaultButton">Create Vault</button>
+        <p>Your new Vault ID: <span id="newVaultId"></span></p>
+    </div>
+
+    <hr>
+
+    <div id="vaultManager">
+        <h2>Manage Your Vault</h2>
+        <div>
+            <label for="vaultIdInput">Vault ID:</label>
+            <input type="number" id="vaultIdInput" placeholder="Enter your vault ID">
+        </div>
+        <div>
+            <label for="depositAmountInput">Collateral Amount:</label>
+            <input type="number" id="depositAmountInput" placeholder="Amount to deposit">
+            <button id="depositButton">Deposit Collateral</button>
+        </div>
+    </div>
+    
+    <hr>
+
+    <div id="vaultViewer">
+        <h2>View Vault Details</h2>
+        <div>
+            <label for="viewVaultIdInput">Vault ID:</label>
+            <input type="number" id="viewVaultIdInput" placeholder="Enter vault ID to view">
+            <button id="getVaultButton">Get Vault Info</button>
+        </div>
+        <div>
+            <p>Collateral: <span id="vaultCollateral"></span></p>
+            <p>Debt: <span id="vaultDebt"></span></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
